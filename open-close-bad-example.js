@@ -25,10 +25,12 @@ class Wallet {
   {
       this.m_Money = money;
   }
-}
 
-class Printer {
-  printMoney(money) {
-    // print money
+  printMoney(currency) {
+    if (currency === 'Dollar') {
+      // print Dollar
+    } else {
+      // print Euro
+    }    
   }
 }

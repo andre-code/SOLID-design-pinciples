@@ -32,3 +32,14 @@ class Printer {
     // print money
   }
 }
+
+class DollarPrinter extends Printer {
+  printMoney(money) {
+    // print Dollar
+  }
+}
+class EuroPrinter extends Printer {
+  printMoney(money) {
+    // print euro
+  }
+}
