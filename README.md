@@ -1,7 +1,8 @@
 # SOLID-design-pinciples
 SOLID represents a set of guides that help to avoid having a bad design. This term was associated by Robert Martin who brought them together in "Agile Software Development: Principles, Patterns, and Practices."
 
-The goal is to develop code that is clear, maintainable, scalable, and less error-prone.
+The main goal of the SOLID principles is that any software should tolerate change, should be easy to understand and less error-prone.
+It helps us to think about the right way to build a software system.
 It is based on 5 principles or also called good practices.
 * S — Single responsibility principle
 * O — Open closed principle
@@ -33,3 +34,14 @@ It is based on 5 principles or also called good practices.
 - The parent class serves the class has the base members that child classes extend from. Derived types must be completely substitutable for their base types.
 - Implementations of the same interface should never give a different result.
 - To make sure your code follows the Liskov Substitution Principle is mindful programming. Always keep in mind what the system expects when you’re implementing its functionality.
+
+## I — Interface segregation principle
+- The ISP states that no client should be forced to depend on methods it does not use. “Client” in this case means the implementing class of an interface.
+- If a client does not need a method then the client should not know about the method / should not have to implement it.
+- In general, the word interface is used to define an abstract class that contains no data but defines properties and methods of a class.
+- Similar to the Single Responsibility Principle, the goal of the Interface Segregation Principle is to reduce the side effects and frequency of required changes by splitting the software into multiple, independent parts.
+- Interface is also the keyword that is used in Java, C#, Typescript and other programming languages, so in the context of those languages the word interface is synonymously used to describe the language-specific type of interface.
+- Though the JavaScript language may not provide interface types to aid in specifying the contract of an object, the object’s implicit interface still serves as a contract to clients within an application.
+ - In languages like Java and C#, all methods declared by an interface must be implemented. For cases where a particular interface is required, but only a subset of the behavior is relevant for a given usage scenario, the unused methods are generally stubbed out with empty implementations or with implementations which simply throw an exception indicating the method isn’t actually implemented,  that is a violation of this principle.
+- In JavaScript, cases, where only a subset of an object’s interface is utilized, doesn’t end up posing the same issues since a substituting object need only provide the expected properties to conform to the consumed portion of the object’s interface. Nevertheless, such implementations can still lead to Liskov Substitution Violations.
+- In summary, the dynamic capabilities of JavaScript leave us with a few less consequences to the occurrence of non-cohesive interfaces than with statically-typed languages, but the Interface Segregation Principle has its place in the design of JavaScript applications nonetheless.
